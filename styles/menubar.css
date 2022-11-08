@@ -1,0 +1,37 @@
+#Clothing{
+    width: 300px;
+    height: auto;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-left: 30px;
+    gap: 20px;
+    /* display: none; */
+}
+#Clothing>a{
+    text-decoration: none;
+    color: black;
+}
+#Clothing>a:hover{
+    text-decoration: underline;
+}
+
+#shoes{
+    width: 300px;
+    height: auto;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-left: 30px;
+    gap: 20px;
+    display: none;
+}
+#shoes>a{
+    text-decoration: none;
+    color: black;
+}
+#shoes>a:hover{
+    text-decoration: underline;
+}
