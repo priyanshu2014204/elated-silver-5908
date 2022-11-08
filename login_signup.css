@@ -1,0 +1,100 @@
+#container{
+    
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: auto;
+}
+.userdata{
+    display: grid;
+     margin-top: 100px;
+}
+#heading{
+    font-family: 'Times New Roman', Times, serif;
+  width: 400px;
+  font-size: 36px;
+    line-height: 1.2222222222;
+    font-weight: 100;
+}
+
+.userdata input{
+    width:59%;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid silver;
+    margin-bottom: 10px;
+}
+
+.userdata button{
+    width:63%;
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    font-size: 20px;
+    border: none;
+     transition-property: background-color;
+      transition-duration: 1s;
+     padding: 10px;
+}
+.userdata button:hover{
+   background-color:gray;
+   
+}
+#empty{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3,1fr);
+    width:63%;
+    color: silver;
+    margin-top: 20px;
+}
+ #empty .line{
+  width: 165px;
+  border: 0px solid silver;
+  height: 0.5px;
+  background-color: silver;
+  
+}
+
+#empty .emptytext{
+    margin-top: -6px;
+}
+
+#google,#apple,#facebook{
+    display: flex;
+    cursor: pointer;
+    width: 59%;
+    font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;;
+    padding-right: 20px;
+    padding-left: 10px;
+    margin-top: 25px;
+    border-radius: 2px;
+    margin-bottom: -15px;
+    transition-property: background-color;
+    border: 1px solid black;
+    transition-duration: 1s;
+    
+}
+
+#google:hover,#apple:hover,#facebook:hover{
+    background-color:aliceblue;
+    
+   }
+
+
+   
+    
+
+#google img,#apple img,#facebook img{
+    width: 20px;
+    height: 20px;
+    margin-right: 70px;
+    margin-top: 20px;
+}
+
+#imageslides{
+    background-color: black;
+}
