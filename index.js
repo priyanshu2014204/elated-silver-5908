@@ -90,15 +90,3 @@ function append(data){
 
 
 //   ..................................................
-// const xyz = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '205e8a9fcamshff58f4166a55898p1c82d7jsn07826ca07c65',
-// 		'X-RapidAPI-Host': 'unofficial-shein.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://unofficial-shein.p.rapidapi.com/products/search?keywords=women%20jacket&language=en&country=US&currency=USD&sort=7&limit=4&page=1', xyz)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
