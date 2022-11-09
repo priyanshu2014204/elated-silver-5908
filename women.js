@@ -8,7 +8,11 @@ let basicnav=document.querySelector(".navbar");
 
 basicnav.innerHTML=topnav()
 
-
+let logo=document.querySelector(".logo");
+logo.addEventListener("click",()=>{
+    // window.location.href="index.html"
+    console.log("1")
+})
 
 // extra api key
 // 205e8a9fcamshff58f4166a55898p1c82d7jsn07826ca07c65
