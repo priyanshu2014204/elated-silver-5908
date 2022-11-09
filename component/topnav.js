@@ -9,7 +9,7 @@ function topnav(){
 <!-- navbar bottom section ended here -->
 <div class="navbar-bottom">
     <div>
-        <a href="" class="logo">LYST</a>
+        <a href="index.html" class="logo">LYST</a>
         <p class="women">WOMEN</p>
         <p class="men">MEN</p>
     </div>
