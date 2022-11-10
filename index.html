@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="suggestion.css">
+    
 </head>
 
 <body>
@@ -28,9 +30,16 @@
                 <p>WOMEN</p>
                 <p>MEN</p>
             </div>
-            <input type="text" class="searchbar" placeholder="SEARCH (E.G. ACNE JEANS)">
+            <input type="text" class="searchbar" placeholder="SEARCH (E.G. ACNE JEANS)" onmousedown="suggestion()"> 
         </div>
+        
     </div>
+
+
+    <div id="search">
+
+
+    </div>            <!--- Make sure the overflow of the whole page is hidden when onmousedown is active --> 
 
 
     <!-- slider start here -->
