@@ -1,7 +1,11 @@
 const options = {
 	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '205e8a9fcamshff58f4166a55898p1c82d7jsn07826ca07c65',
+	// headers: {
+	// 	'X-RapidAPI-Key': '205e8a9fcamshff58f4166a55898p1c82d7jsn07826ca07c65',
+	// 	'X-RapidAPI-Host': 'unofficial-shein.p.rapidapi.com'
+	// }
+    headers: {
+		'X-RapidAPI-Key': '8df887ff64msh75058ca573a347fp10b55djsn25b1eaee7cb0',
 		'X-RapidAPI-Host': 'unofficial-shein.p.rapidapi.com'
 	}
 };
@@ -30,8 +34,8 @@ search.addEventListener("mouseout",()=>{
 
 
 async function stolingdata(){
-    let response=await fetch('#https://unofficial-shein.p.rapidapi.com/products/list?cat_id=1931&adp=10170797&language=en&country=US&currency=USD&sort=7&limit=6&page=1', options)   
-    let trending=await fetch('#https://unofficial-shein.p.rapidapi.com/products/search?keywords=women%20jacket&language=en&country=US&currency=USD&sort=7&limit=6&page=1', options)   
+    let response=await fetch('https://unofficial-shein.p.rapidapi.com/products/list?cat_id=1931&adp=10170797&language=en&country=US&currency=USD&sort=7&limit=6&page=1', options)   
+    let trending=await fetch('https://unofficial-shein.p.rapidapi.com/products/search?keywords=women%20jacket&language=en&country=US&currency=USD&sort=7&limit=6&page=1', options)   
     
     let data=await response.json();
    console.log(data)
@@ -117,7 +121,7 @@ console.log(slider)
 
 
 
-=======
+
 // search suggestion carousel sections //
 
 
@@ -205,7 +209,7 @@ const carousel_3_data = [{
 const suggestion = () => {
 
  //document.getElementsById("navbar").style.overflowY = "hidden";
-
+document.querySelector("body").style.overflowY="hidden"
 
   content_div();
 
@@ -243,6 +247,7 @@ close_div.style.right = "-95%";
 close_div.addEventListener("click", () => {
   search_div.style.width = "0px";
   search_div.style.height = "0px";
+
 })
 download_div.append(close_div);
 
@@ -438,27 +443,95 @@ let mendirection=document.querySelector(".men")
 let slidecard=document.querySelector(".slidcard");
 let sliden=document.querySelector(".slider");
 let sensitive=document.querySelector(".pineapple");
-let slidetest=document.querySelector(".sticktest")
-window.addEventListener("scroll",()=>{
-    displaydocs.style.display="block"
-   let a=window.scrollY;
-   if(a>95){
-       sliden.style.transition="1s"
-       sliden.style.position="sticky";
-       sensitive.style.position="sticky";
-       slidecard.style.width="100%"
-       sliden.style.height="100vh";
-       sensitive.style.top="0px";
+let slidetest=document.querySelector(".sticktest");
 
-    // slidetest.style.display="block"
-    // slidetest.style.marginBottom="400px"
-    
-}else{
-    sliden.style.height="500px"
-    slidecard.style.width="90%"
-    slidetest.style.display="none"
-    
+// let lifesaver=setInterval(function(){
+//     displaydocs.style.display="block"
+//     let a=Math.ceil(window.scrollY);
+//     if(a>95 && a<900){
+//         sliden.style.transition="1s"
+//         sliden.style.position="sticky";
+//         sensitive.style.position="sticky";
+//         slidecard.style.width="100%"
+//         sliden.style.height="100vh";
+//         sensitive.style.top="0px";
+ 
+//      // slidetest.style.display="block"
+//      // slidetest.style.marginBottom="400px"
+     
+//  } else if(a>900){
+ 
+//      console.log("hello",a,a>900)
+//     //  sliden.style.height="0px";
+//      sensitive.style.position="static";
+//      clearTimeout(lifesaver)
+//  }
+//  else{
+//      sliden.style.height="500px"
+//      slidecard.style.width="90%"
+//      slidetest.style.display="none"
+//      console.log(a)
+//     }
+// },1)
+
+function camio(){
+    let camren=setInterval(()=>{
+        let a=window.scrollY;
+        if(a>95 && a<940){
+                   slidecard.style.transition="1s"
+            //        sliden.style.position="sticky";
+                   sensitive.style.position="sticky";
+                   slidecard.style.width="100%"
+                   sliden.style.height="100vh";
+                   sensitive.style.top="0px";
+        }else{
+            sliden.style.height="500px"
+    sensitive.style.position="static";
+            clearTimeout(camren)
+        }
+    },1)
+}
+
+
+
+window.addEventListener("scroll",()=>{
+   
+//     displaydocs.style.display="block"
+   let a=Math.ceil(window.scrollY);
+   if(a>95 && a<940){
+       camio()
    }
+//    if(a>95 && a<940){
+// //        sliden.style.transition="1s"
+// //        sliden.style.position="sticky";
+//        sensitive.style.position="sticky";
+//        slidecard.style.width="100%"
+//        sliden.style.height="100vh";
+//        sensitive.style.top="0px";
+
+// //     // slidetest.style.display="block"
+// //     // slidetest.style.marginBottom="400px"
+// console.log(a)
+//    }else{
+    // sliden.style.height="500px"
+    // sensitive.style.position="static";
+//    }
+// } else if(a>900){
+
+//     console.log("hello",a,a>900)
+//     sliden.style.height="0px";
+//     sensitive.style.position="0px";
+// }
+// else{
+//     sliden.style.height="500px"
+//     slidecard.style.width="90%"
+//     slidetest.style.display="none"
+//     console.log(a)
+//    }
+  
+//    if(a>1000){
+//    }
+//    console.log(a)
 })
 
 
@@ -473,13 +546,14 @@ let typed=new Typed(".autocorrect",{
 let k=0
 let bounce=document.querySelector(".bounceball");
 
-let z=0;
+let z=20;
 let power=0
 let elementneedrotation=document.querySelector(".pineapple")
 let deg=0
-
+// bounce.style.display="none"
+function gamble(){
 let hardinterval=setInterval(()=>{
-    
+    bounce.style.transform="rotate(360deg)"
     if(k<45){
         k=k+0.5
     bounce.style.top=k+"px"}
@@ -498,20 +572,22 @@ let hardinterval=setInterval(()=>{
     //     // bounce.style.top=k+"px"
         bounce.style.left=z+"px";
         z++
-        elementneedrotation.style.transform = `skew(${deg}deg,${deg}deg)`
+        // elementneedrotation.style.transform = `skew(${deg}deg,${deg}deg)`
        
-        displaydocs.style.display="none"
-        // elementneedrotation.style.transform = `rotateX(1)`
+        // displaydocs.style.display="none"
+        elementneedrotation.style.transform = `rotate(${deg}deg)`
         // elementneedrotation.style.transform = `rotateY(1)`
         // rotate3d(1, 1, 1, 363deg)
-        if(deg<94.9){
+        if(deg<360.9){
         deg=deg+0.5}
         else{
-            bounce.style.display="none"
-            sensitive.style.position="sticky"
-            sensitive.style.width="100%"
-            sensitive.style.top="0px";
-            sliden.style.height="100vh";
+
+            // bounce.style.display="none"
+            // sensitive.style.position="sticky"
+            // sensitive.style.width="100%"
+            // sensitive.style.top="0px";
+            // sliden.style.height="100vh";
+            dropoff()
             elementneedrotation.style.transform = `skew(0,0)`
             clearInterval(hardinterval);
             deg++
@@ -521,11 +597,80 @@ let hardinterval=setInterval(()=>{
     }
     // bounce.style.left="90px"
     console.log(k)
-},10)
+},1)
+}
+
+// gamble()
+tooper=0
+function dropoff(){
+   let dropend =setInterval(()=>{
+    // if(){}
+    // else{}
+    if(tooper<500){
+    bounce.style.top=tooper+"px";
+    tooper++}else{
+        dropgear()
+        clearTimeout(dropend)
+    }
+    // else if(tooper===5500){
+    //     bounce.style.top=tooper+"px";
+    //      tooper--
+    // }
+    
+   },1)
+}
 
 
 
-=======
 mendirection.addEventListener("click",()=>{window.location.href="men.html"})
     // ending refering
 
+    bounce.id="bouncing"
+
+
+
+  function dropgear(){
+    deg=0;
+    
+    let dropper=setInterval(()=>{
+        if(deg<4){
+        elementneedrotation.style.transform = `rotate(${deg}deg)`;
+        deg=deg+0.4}
+        else{
+            bounce.style.left=z+"px";
+            z=z+1
+        }
+        if(z===1600){
+            document.querySelector("body").style.backgroundColor="black"
+            document.querySelector(".logo").style.color="white"
+            sliden.style.backgroundColor="black"
+            elementneedrotation.style.transform = `rotate(0deg)`;
+            makemeperfect()
+            clearTimeout(dropper)
+        }
+    },1)
+
+  }  
+
+
+
+  function makemeperfect(){
+    let cond=0
+    let evergreen=setInterval(()=>{
+        if(cond===2){
+            document.querySelector("body").style.backgroundColor="white"
+            document.querySelector(".logo").style.color="black"
+            sliden.style.backgroundColor="white"
+        }
+        cond++
+      
+    },1000)
+  }
+  let aball=document.querySelector(".bounceparent");
+aball.addEventListener("click",gamble)
+
+let againtest=0
+  setInterval(()=>{
+ aball.style.transform=`rotate(${againtest}deg)`
+ againtest++
+  },5)
