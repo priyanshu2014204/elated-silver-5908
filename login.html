@@ -8,16 +8,49 @@
     <link rel="stylesheet" href="login_signup.css">
 </head>
 <body>
-
+    <div id="navbar"></div>
     <div id="container">
+        <div id="oldpass">
+            <h1>Welcome back, log in to your account</h1>
+            <div class="newuser">
+                <img src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png" alt="">
+               <div class="changeoption">
+                <span id="emailname">Ajay sehwal</span>
+                <a href="" style="color:black ;">Change</a>
+               </div>            
+            </div>
+            <p>Password</p>
+            <input type="password"  id="oldpass" placeholder="Enter password">
+            
+            <button id="login">Log in</button>
+            <span style="color:gray;margin-left:30px;margin-top:30px;">OR DON'T HAVE A PASSWORD?</span>
+            <button id="signup">Email me a link to sign in</button>
+        </div>
+        <div id="createpass">
+            <h1>Create an account</h1>
+            <div class="newuser">
+                <img src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png" alt="">
+               <div class="changeoption">
+                <span id="emailname">Ajay Sehwal</span>
+                <a href="" style="color: black;">Change</a>
+               </div>            
+            </div>
+            <p>Create a password</p>
+            <input type="password"  id="newpass" placeholder="Create password">
+            <div class="newpasstext">
+                <input type="checkbox"  id="tik">
+                <p style="width:700px ;margin-left:-50px;">I would like to hear about products, services, and sales, including personalized email alerts from Lyst. You can unsubscribe at any time.</p>
+            </div>
+            <button id="signup">Sign up</button>
+        </div>
         <div class="userdata">
           <h1 id="heading">The only fashion site you need</h1>
-           <span style="font-family:Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;">Email</span>
+           <span style="font-family:Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;margin-top:10px;">Email</span>
            <input type="text" placeholder="Enter your email address to login or register">
            <button>Continue</button>
             <div id="empty">
                 <div class="line"></div>
-                <div class="emptytext">Or</div>
+                <div class="emptytext" style="color: gray ;">OR</div>
                 <div class="line"></div>
             </div>
              <div id="google">
@@ -32,8 +65,38 @@
                 <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="">
                 <h3>Continue with Facebook</h3>
             </div>
-        </div>
-        <div id="imageslides"></div>
+            <div id="info">
+                <p>By creating an account, you consent to Lyst’s <a href="" style="color:black;">Terms & Conditions</a>. To learn more about how Lyst uses and protects your personal data, please read Lyst’s <a href="" style="color:black ;">Privacy Policy</a>.</p>
+            </div>
+          </div>
+          
+    <div id="move">
     </div>
+    </div>
+
+    <div id="footer"></div>
 </body>
 </html>
+
+<script>
+
+let div=document.querySelector("#move")
+    let imgtag=document.createElement("img");
+
+    let images=[`https://static.lystit.com/static/n/img/sign-up/value-proposition-full-min.12502ad2e109c860f1eeceea2a988ddf.png`,
+    `https://static.lystit.com/static/n/img/sign-up/value-proposition-full-min.12502ad2e109c860f1eeceea2a988ddf.png`]
+
+    imgtag.src=images[0];
+
+    div.append(imgtag)
+     let i=0
+  setInterval(function(){
+     if(i==images.length){
+        i=0
+     }
+    imgtag.src=images[i];
+    div.append(imgtag);
+    i++;
+
+  },30000)
+</script>
