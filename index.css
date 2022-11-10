@@ -77,6 +77,10 @@ body{
     padding-left: 20px;
 }
 
+#search{
+    display: flex;
+    flex-direction: column;                                                                                                                   
+}
 
 #container-1,#container-2{
     display: flex;
