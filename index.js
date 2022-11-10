@@ -6,6 +6,12 @@ const options = {
 	}
 };
 
+let logo=document.querySelector(".sign-up");
+logo.addEventListener("click",()=>{
+    window.location.href="login.html"
+    // console.log("1")
+})
+
 
 let search=document.querySelector(".searchbar")
 
@@ -103,6 +109,13 @@ slider.forEach(function(el,index){
 
 console.log(slider)
 
+// let testslid=document.querySelectorAll(".slidtest>img");
+// testslid.forEach(function(el,index){
+//     el.style.left=`${index *100}%`
+// })
+
+
+
 
 
 let count=0
@@ -130,6 +143,11 @@ setInterval(
             slider.forEach(function(el,index){
                 el.style.left=`${index *100}%`
             })
+        //   testslid.forEach(
+        //     function(el,index){
+        //         el.style.left=`${index *100}%`
+        //     }
+        //   )
         }
          a()
     },
@@ -143,6 +161,11 @@ function a(){
                             el.style.transform=`translateX(-${count*100}%)`;
                                 //    console.log(el.style.transform)
                        })
+    // testslid.forEach(function(el){
+    //                         el.style.transform=`translateX(-${count*100}%)`;
+    //                             //    console.log(el.style.transform)
+    //                    })
+
 }
 
 
@@ -183,7 +206,7 @@ const opt = {
 
 
 
-
+    let displaydocs=document.querySelector(".navbar");
 
     // refering
 
@@ -193,3 +216,117 @@ womendirection.addEventListener("click",()=>{window.location.href="women.html"})
 
 
     // ending refering
+
+
+
+    // test jest
+
+
+
+
+//     let testslid=document.querySelector(".slidtest>img");
+//    let i=0
+//     let slidimg=["https://cdna.lystit.com/cms/designer_rail_gucci_eca9e74796.jpg","https://cdna.lystit.com/cms/791d5cce_14ec_4b7a_b6df_6cb35f1abf9c_0e299e3b12.png","https://cdna.lystit.com/cms/designer_rail_valentino_421c18fab0.jpeg"];
+
+    
+//     setInterval(()=>{
+//         testslid.src=slidimg[i];
+//         i++;
+//         // window.scrollY++;
+//         console.log(window.scrollY)
+//         if(i===3){
+//             i=0
+//         }
+//     },3000)
+
+// .slider
+let slidecard=document.querySelector(".slidcard");
+let sliden=document.querySelector(".slider");
+let sensitive=document.querySelector(".pineapple");
+let slidetest=document.querySelector(".sticktest")
+window.addEventListener("scroll",()=>{
+    displaydocs.style.display="block"
+   let a=window.scrollY;
+   if(a>95){
+       sliden.style.transition="1s"
+       sliden.style.position="sticky";
+       sensitive.style.position="sticky";
+       slidecard.style.width="100%"
+       sliden.style.height="100vh";
+       sensitive.style.top="0px";
+
+    // slidetest.style.display="block"
+    // slidetest.style.marginBottom="400px"
+    
+}else{
+    sliden.style.height="500px"
+    slidecard.style.width="90%"
+    slidetest.style.display="none"
+    
+   }
+})
+
+
+// typing section and bouncing section
+let typed=new Typed(".autocorrect",{
+    strings:["ACNE JEANS","UNDERWEAR","HOODIE"],
+    typeSpeed:150,
+    backSpeed:150,
+    loop:true
+});
+
+let k=0
+let bounce=document.querySelector(".bounceball");
+
+let z=0;
+let power=0
+let elementneedrotation=document.querySelector(".pineapple")
+let deg=0
+
+let hardinterval=setInterval(()=>{
+    
+    if(k<45){
+        k=k+0.5
+    bounce.style.top=k+"px"}
+    else if(z<580){
+        bounce.style.position="relative"
+         bounce.style.top="-2px"
+        bounce.style.left=z+"px";
+        z++
+    }else{
+        // bounce.style.display = 'block'
+    //    let variable=0.17**power
+    //     // k=k+0.5
+    //     power++
+    //     z=z++
+    //     bounce.style.position="relative"
+    //     // bounce.style.top=k+"px"
+        bounce.style.left=z+"px";
+        z++
+        elementneedrotation.style.transform = `skew(${deg}deg,${deg}deg)`
+       
+        displaydocs.style.display="none"
+        // elementneedrotation.style.transform = `rotateX(1)`
+        // elementneedrotation.style.transform = `rotateY(1)`
+        // rotate3d(1, 1, 1, 363deg)
+        if(deg<94.9){
+        deg=deg+0.5}
+        else{
+            bounce.style.display="none"
+            sensitive.style.position="sticky"
+            sensitive.style.width="100%"
+            sensitive.style.top="0px";
+            sliden.style.height="100vh";
+            elementneedrotation.style.transform = `skew(0,0)`
+            clearInterval(hardinterval);
+            deg++
+        }
+       
+    //     console.log(elementneedrotation)
+    }
+    // bounce.style.left="90px"
+    console.log(k)
+},10)
+
+
+

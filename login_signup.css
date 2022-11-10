@@ -289,3 +289,98 @@ height: 30px;
 display: grid;
 margin-bottom: 20px;
 }
+
+
+
+
+/* priyanshu appended css data here */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin: 0px;
+    padding: 0px; */
+    overflow-x: hidden;
+}
+
+
+
+.navbar{
+    width: 96%;
+    margin: auto;
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+    /* width: 100%; */
+    z-index: 1;
+    opacity: 100;
+    background-color: white;
+    height: 100px;
+    padding-top: 15px;
+}
+
+
+.navbar-top{
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 80%;
+}
+
+.navbar-top>p{
+     margin-right: 24px;
+}
+
+
+.navbar-top>button{
+    background-color: black;
+    color: white;
+    font-size: 120%;
+    font-weight: bolder;
+    height: 97%;
+}
+
+.navbar-bottom{
+    display: flex;
+
+    align-items: center;
+}
+
+.navbar-bottom>div{
+    display: flex;
+}
+
+
+.navbar-bottom>div a,.navbar-bottom>div p{
+    margin-right: 24px;
+}
+
+.logo{
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 250%;
+    color: black;
+}
+
+
+
+.navbar-bottom>div p{
+    color: grey;
+    display: flex;
+    align-items: center;
+}
+
+
+.searchbar{
+    width: 164vh;
+    height: 5vh;
+    border: 2px solid;
+    font-weight:lighter;
+    font-size: 105%;
+    color: grey;
+    padding-left: 20px;
+}
+
+
+
+/*  ended that data */

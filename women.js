@@ -8,15 +8,17 @@ let basicnav=document.querySelector(".navbar");
 
 basicnav.innerHTML=topnav()
 
-let logo=document.querySelector(".logo");
+let logo=document.querySelector(".sign-up");
 logo.addEventListener("click",()=>{
-    // window.location.href="index.html"
-    console.log("1")
+    window.location.href="login.html"
+    // console.log("1")
 })
 
 // extra api key
 // 205e8a9fcamshff58f4166a55898p1c82d7jsn07826ca07c65
 // 
+
+let searchput=document.querySelector(".searchbar");
 
 
 const opt = {
@@ -32,7 +34,22 @@ headers: {
 }
 };
 
-// fetch('https://apidojo-forever21-v1.p.rapidapi.com/products/search?query=jacket&rows=8&start=0', opt)
+function availdata(search){
+  let value=searchput.value || "braa"
+    // fetch(`https://apidojo-forever21-v1.p.rapidapi.com/products/search?query=${value}&rows=2&start=0`, opt)
+    // 	.then(response => response.json())
+    // 	.then(response => appendstick(response.response.docs))
+    // 	.catch(err => console.error(err));
+    // console.log(search)
+}
+availdata("ok")
+
+// fetch('https://apidojo-forever21-v1.p.rapidapi.com/products/search?query=hoodie&rows=8&start=0', opt)
+// 	.then(response => response.json())
+// 	.then(response => appendstick(response.response.docs))
+// 	.catch(err => console.error(err));
+
+// fetch('https://apidojo-forever21-v1.p.rapidapi.com/products/search?query=hoodie&rows=8&start=0', opt)
 // 	.then(response => response.json())
 // 	.then(response => appendstick(response.response.docs))
 // 	.catch(err => console.error(err));
@@ -40,6 +57,7 @@ headers: {
 
     function appendstick(data){
 let div=document.querySelector(".appenddatawomen");
+div.innerHTML=""
 
 data.forEach(function(el){
     let main_div=document.createElement("div")
@@ -72,7 +90,7 @@ window.addEventListener("scroll",scroll)
         let scrolleddown=window.scrollY;
         if(scrolleddown>143){
           skickyscrol.style.position="fixed";
-          skickyscrol.style.top="0px";
+          skickyscrol.style.top="-10px";
         //   -723px
            appenddatawomen.style.top="0px"
         }else{
@@ -82,3 +100,15 @@ window.addEventListener("scroll",scroll)
         }
       console.log(window.scrollY)
     }
+
+
+
+
+searchput.addEventListener("input",bringdata);
+
+
+function bringdata(){
+    setTimeout(()=>{
+        availdata(searchput.value)
+    },10000)
+}
