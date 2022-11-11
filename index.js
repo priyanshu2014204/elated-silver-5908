@@ -419,7 +419,7 @@ let womendirection=document.querySelector(".women")
 womendirection.addEventListener("click",()=>{window.location.href="women.html"})
 
 let mendirection=document.querySelector(".men")
-
+mendirection.addEventListener("click",()=>{window.location.href="men.html"})
 
     // ending refering
 
@@ -710,6 +710,7 @@ let againtest=0
 
 
 
+
 //   let scrolltimeline=document.querySelector(".scroltime");
 //  console.log(scrolltimeline)
 //   let scrolltagline=new ScrollTimineline({
@@ -727,3 +728,11 @@ let againtest=0
 //       timeline:scrolltagline,
 //     }
 //   );
+
+  // Help button functionality
+
+  let btn = document.getElementById("help");
+  btn.addEventListener("click", () => {
+    window.location.href = "about.html";
+  })
+

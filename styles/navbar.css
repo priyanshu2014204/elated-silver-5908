@@ -108,7 +108,10 @@ body{
 .women{
     text-decoration: underline;
 }
-
+.men{
+    text-decoration: underline;
+   
+}
 .appenddatawomen{
 
     height: 903px;
@@ -131,6 +134,8 @@ body{
 .appenddatawomen>div>div{
 }
 /* ended that css */
+
+
 
 
 
