@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <div class="navbar"></div>
+    <div class="checkout-panel">
+        <div class="panel-body">
+          <h2 class="title">Checkout here!</h2>
+       
+          <div class="progress-bar">
+            <div class="step active"></div>
+            <div class="step active"></div>
+
+            <div class="step"></div>
+            <div class="step"></div>
+          </div>
+       
+          <div class="payment-method">
+            <label for="card" class="method card">
+              <div class="card-logos">
+                <img src="https://designmodo.com/demo/checkout-panel/img/visa_logo.png"/>
+                <img src="https://designmodo.com/demo/checkout-panel/img/mastercard_logo.png"/>
+              </div>
+       
+              <div class="radio-input">
+                <input id="card" type="radio" name="payment">
+                Pay with credit card
+              </div>
+            </label>
+              
+            <label for="paypal" class="method paypal">
+              <img src="https://designmodo.com/demo/checkout-panel/img/paypal_logo.png"/>
+              <div class="radio-input">
+                <input id="paypal" type="radio" name="payment">
+                Pay with PayPal
+              </div>
+            </label>
+          </div>
+          <img id="load" src="https://media1.giphy.com/media/3o7TKs9KEJavDWiRhu/200w.webp?cid=ecf05e47mn91trztbswsxuj4y7ogsrxjshizq34qsf3m2oyj&rid=200w.webp&ct=g" alt="">
+
+           <p style="color:red;text-align:center;width:210px;padding:7px;margin: auto;margin-bottom: 20px; display: none;" id="error">Invalid credit card number !</p>
+          <div class="input-fields">
+            <div class="column-1">
+              <label for="cardholder">Name</label>
+              <input type="text" id="cardholder" />
+       
+              <div class="small-inputs">
+                <div>
+                  <label for="date">Valid date</label>
+                  <input type="text" id="date"/>
+                </div>
+       
+                <div>
+                  <label for="verification">CVV / CVC *</label>
+                  <input type="password" id="verification"/>
+                </div>
+              </div>
+       
+            </div>
+            <div class="column-2">
+              <label for="cardnumber">Card Number</label>
+              <input type="password" id="cardnumber"/>
+       
+              <span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
+            </div>
+          </div>
+        </div>
+           
+        <div class="panel-footer">
+          <button class="btn back-btn" id="back">Back</button>
+          <button class="btn next-btn" id="next">Next Step</button>
+        </div>
+      </div>
+
+      <div class="footer"></div>
+</body>
+</html>
+
+<script>
+
+$(document).ready(function() {
+ 
+ $('.method').on('click', function() {
+   $('.method').removeClass('blue-border');
+   $(this).addClass('blue-border');
+ });
+
+})
+// document.querySelector("#logo").addEventListener("click",function(){
+//         document.location.href="index.html";
+//     })
+var $cardInput = $('.input-fields input');
+
+$('.next-btn').on('click', function(e) {
+
+ $cardInput.removeClass('warning');
+
+ $cardInput.each(function() {    
+    var $this = $(this);
+    if (!$this.val()) {
+      $this.addClass('warning');
+    }
+ })
+});
+
+let name=document.querySelector("#cardholder");
+let date=document.querySelector("#date");
+let verification=document.querySelector("#verification");
+let number=document.querySelector("#cardnumber");
+
+document.querySelector("#next").addEventListener("click",function(){
+  if(name.value===""&&date.value==""&&verification.value==""&&number.value==""&&verification.value.length!==4&&number.value.length!==12){
+    document.querySelector("#error").style.display="block"
+  }else{
+       document.querySelector(".payment-method").style.display="none"
+       document.querySelector(".radio-input").style.display="none"
+       document.querySelector("label").style.display="none";
+        document.querySelector(".input-fields").style.display="none";
+        document.querySelector("#load").style.display="block"
+        document.querySelector(".panel-footer").style.display="none"
+    setInterval(function(){
+      document.location.href="signup.html";
+      
+    },15000)
+}
+  })
+
+  document.querySelector("#back").addEventListener("click",()=>{
+    document.location.href="index.html";
+  })
+
+</script>
