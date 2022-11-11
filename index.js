@@ -74,7 +74,7 @@ function append(data){
 
 
 
-//    stolingdata()
+  //  stolingdata()
 
 
 
@@ -247,7 +247,7 @@ close_div.style.right = "-95%";
 close_div.addEventListener("click", () => {
   search_div.style.width = "0px";
   search_div.style.height = "0px";
-
+  document.querySelector("body").style.overflowY="scroll"
 })
 download_div.append(close_div);
 
@@ -482,24 +482,49 @@ function camio(){
             //        sliden.style.position="sticky";
                    sensitive.style.position="sticky";
                    slidecard.style.width="100%"
-                   sliden.style.height="100vh";
-                   sensitive.style.top="0px";
+                   slidecard.style.height="100vh";
+                    // sliden.style.position="relative"
+                   sliden.style.top="0px";
+                   displaydocs.style.display="none"
+                  //  top: -49px;
         }else{
-            sliden.style.height="500px"
-    sensitive.style.position="static";
+            // sliden.style.height="500px"
+            slidecard.style.height="500px"
+
+            slidecard.style.width="90%"
+           sensitive.style.position="static";
             clearTimeout(camren)
+            displaydocs.style.display="block"
+            sliden.style.position="static"
         }
     },1)
 }
 
 
-
+let testscroll=0
 window.addEventListener("scroll",()=>{
-   
+//   let ainscroll= window.scrollY-testscroll
+
+//   if(window.scrollY!==0){
+// let apple=document.querySelector(".logo");
+// apple.style.position="relative"
+// if(ainscroll>0){
+//   apple.style.left=window.scrollY+"px"
+// }else{
+//   apple.style.right=window.scrollY+"px"
+// }
+//   }else{
+//     apple.style.left="0px"
+//     apple.style.right="0px"
+//   }
+
+//   testscroll=window.scrollY
+
 //     displaydocs.style.display="block"
    let a=Math.ceil(window.scrollY);
    if(a>95 && a<940){
-       camio()
+    console.log("calling camio")
+      //  camio()
    }
 //    if(a>95 && a<940){
 // //        sliden.style.transition="1s"
