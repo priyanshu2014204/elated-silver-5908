@@ -1,3 +1,9 @@
+import { footer } from "./component/footer.js";
+// import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
+let Footer=document.getElementById("footer");
+Footer.innerHTML=footer()
+// console.log(footer)
+
 const options = {
 	method: 'GET',
 	// headers: {
@@ -444,6 +450,7 @@ let slidecard=document.querySelector(".slidcard");
 let sliden=document.querySelector(".slider");
 let sensitive=document.querySelector(".pineapple");
 let slidetest=document.querySelector(".sticktest");
+sliden.onclick=()=>{window.location.href="branddeal.html"}
 
 // let lifesaver=setInterval(function(){
 //     displaydocs.style.display="block"
@@ -578,7 +585,7 @@ let deg=0
 // bounce.style.display="none"
 function gamble(){
 let hardinterval=setInterval(()=>{
-    bounce.style.transform="rotate(360deg)"
+    // bounce.style.transform="rotateX(360deg)"
     if(k<45){
         k=k+0.5
     bounce.style.top=k+"px"}
@@ -626,7 +633,7 @@ let hardinterval=setInterval(()=>{
 }
 
 // gamble()
-tooper=0
+let tooper=0
 function dropoff(){
    let dropend =setInterval(()=>{
     // if(){}
@@ -696,12 +703,31 @@ aball.addEventListener("click",gamble)
 
 let againtest=0
   setInterval(()=>{
- aball.style.transform=`rotate(${againtest}deg)`
+//  aball.style.transform=`rotateY(${againtest}deg)`
  againtest++
   },5)
 
 
 
+
+
+//   let scrolltimeline=document.querySelector(".scroltime");
+//  console.log(scrolltimeline)
+//   let scrolltagline=new ScrollTimineline({
+//     source:document.scrollingElement,
+//     orientation:"block",
+//     scrollOffsets:[CSS.percent(0),CSS.percent(100)]
+//   });
+
+//   scrolltagline.animate(
+//     {
+//     transform:["scaleX(0)","scale(1)"],
+//     },
+//     {
+//       duration:1,
+//       timeline:scrolltagline,
+//     }
+//   );
 
   // Help button functionality
 
@@ -709,3 +735,4 @@ let againtest=0
   btn.addEventListener("click", () => {
     window.location.href = "about.html";
   })
+

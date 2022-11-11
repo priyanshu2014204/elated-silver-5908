@@ -35,3 +35,15 @@
 #shoes>a:hover{
     text-decoration: underline;
 }
+
+.btn_div>button{
+  width: 50%;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  margin: auto;
+}
+
+.btn_div{
+    padding-top: 16px;
+}
