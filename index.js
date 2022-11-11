@@ -699,3 +699,13 @@ let againtest=0
  aball.style.transform=`rotate(${againtest}deg)`
  againtest++
   },5)
+
+
+
+
+  // Help button functionality
+
+  let btn = document.getElementById("help");
+  btn.addEventListener("click", () => {
+    window.location.href = "about.html";
+  })

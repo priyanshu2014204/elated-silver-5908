@@ -500,3 +500,8 @@ transform: translateX(-50%);
             /* animation-timing-function: ease-out; */
         }
 }
+
+  #help{
+    display: flex;
+    align-items: center;
+  }
