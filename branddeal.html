@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All brands</title>
+   <link rel="stylesheet" href="brand.css">
+</head>
+<body>
+    <span class="Sphere"></span>
+
+    <!-- Including the TagCloud.js script CDN in the document    -->
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+    <script>
+        const Texts = [
+            'BURBERRY', 'PARADA', 'GUCCI',
+            'NIKE', 'LOUIS VUITTON', 'FENDI',
+            'HERMES', 'ZARA', 'H&M', 'Lululemon',
+            'Chanel', 'Swarovski', 'Levi’s', 'New Balance'
+        ];
+    
+        var tagCloud = TagCloud('.Sphere', Texts, {
+    
+            // Sphere radius in px
+            radius: 230,
+    
+            // animation speed
+            // slow, normal, fast
+            maxSpeed: 'normal',
+            initSpeed: 'fast',
+    
+            // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
+            direction: 135,
+    
+            // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
+            keep: true
+    
+        });
+    
+        // Giving color to each text in sphere
+        var color = '#FF5733 ';
+        document.querySelector('.Sphere').style.color = color;
+    </script>
+
+
+
+    <!--  -->
+    <div class="brandname b1">
+    <h1>H&M</h1>
+    </div>
+    <div class="brandname b2">
+        <h1>Burberry</h1>
+    </div>
+    <div class="brandname b3">
+        <h1>GUCCI</h1>
+    </div>
+    <div class="brandname b4">
+        <h1>Louis Vuitton</h1>
+    </div>
+    <div class="brandname b5">
+        <h1>Fendi</h1>
+    </div>
+    <div class="brandname b6">
+        <h1>HERMES</h1>
+    </div>
+
+    <div class="cross">
+        X
+    </div>
+<!-- brand deal test -->
+
+
+
+</body>
+</html>
+<script>
+    document.querySelector(".cross").addEventListener("click",()=>{window.location.href="index.html"})
+</script>

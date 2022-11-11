@@ -12,6 +12,7 @@ body{
     margin-bottom: 5px;
     cursor: pointer;
     transition: 3s;
+    margin-top: 14px;
 }
 
 
@@ -56,6 +57,7 @@ body{
     text-decoration: none;
     font-size: 250%;
     color: black;
+    text-shadow: 2px 2px 2px #000;
 }
 
 
@@ -246,6 +248,7 @@ width: 300px;
     height: 110px;
     background-color: white;
     z-index: 100;
+    border-top: 1px solid;
 }
 .demonav>div{
     width: 100%;
@@ -322,7 +325,7 @@ width: 300px;
 .rotateone{
     display: flex;
     border: 1px solid black;
-    margin-bottom:  400px;
+    /* margin-bottom:  400px; */
     border-top: 0px;
     background-color: white;
     height: 300px;
@@ -341,14 +344,14 @@ width: 300px;
     width: 40%;
     position: relative;
     left: 64px;
-    top: 21px;
+    top: 70px;
 }
 
 .rotate1>h2{
     position: relative;
     transform: rotate(270deg);
     left: -122px;
-    top: 40px;
+    top: 75px;
 }
 
 .rotate2{
@@ -422,12 +425,28 @@ body{
     position: relative;
     font-weight: bold;
     font-size: 200%;
-    color: rgba(0, 0, 0,0.450);
-    background: linear-gradient(#0097D1 0%,#00a2b3 10%,#00556c 50%,#004040 100%);
-    transform: rotate(360deg);
+    /* color: rgba(0, 0, 0,0.450); */
+    /* background: linear-gradient(#0097D1 0%,#00a2b3 10%,#00556c 50%,#004040 100%);
+     */
+     background: linear-gradient(#94b3be 0%,#0a2528 10%,#072028 50%,#569797 100%);
+
+    /* transform: rotate(360deg); */
+    background: url("image.jpg");
+    background-repeat:repeat-x ;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 1);
+    animation: rotateearth 15s linear infinite;
 }
 
-.bounceparent::before{
+@keyframes rotateearth{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -750px 0;
+    }
+}
+
+/* .bounceparent::before{
     content: "";
     position: absolute;
     border-radius: 50%;
@@ -444,7 +463,7 @@ body{
     background: rgba(0, 0, 0,0.450);
     bottom: -50%;
     filter: blur(20px);
-}
+} */
 
 .bounceparent:hover::before{
     transform: rotateZ('180deg');
@@ -499,4 +518,13 @@ transform: translateX(-50%);
             transform: rotate(360deg);
             /* animation-timing-function: ease-out; */
         }
+}
+
+
+.scroltime{
+    height: 0.5rem;
+    background: linear-gradient(#67d1e9 10%,#006a7b 50%,#00404e 100%);
+    position: fixed;
+    inset: 0 0 auto;
+    
 }
