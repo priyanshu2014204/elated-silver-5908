@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            /* margin: 0px; */
+
+        }
+        #container{
+            width: 100%;
+            height: auto;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            display: flex;
+            /* justify-content: space-evenly; */
+            gap: 90px;
+            background-color: whitesmoke;
+        }
+        #left>div>p:hover{
+            text-decoration: underline;
+            color: teal;
+        }
+        #left{
+            width: 200px;
+            height: 400px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            /* align-items: center; */
+            margin-top: 50px;
+            margin-left: 200px;
+            
+        }
+       #left>div{
+        width: 200px;
+        height: 40px;
+        border-top: 2px solid black;
+        /* border-bottom: 2px solid black; */
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+        border-width: 3px;
+       }
+       #right{
+        height: 600px;
+        width: 600px;
+        /* border: 1px solid red; */
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        line-height: 20px;
+      
+       }
+       #right>p{
+         margin-top: 3px;
+         line-height: 18px;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 15px;
+         font-weight: lighter;
+       }
+       #right>p:hover{
+        text-decoration: underline;
+        color: teal;
+       }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="container">
+     <div id="left">
+        <div><p>Help center</p></div>
+        <div> <p>Shopping on Lyst</p></div>
+        <div><p>Sizing guide</p></div>
+        <div><p>Intellectual property</p></div>
+        <div><p>Terms & conditions</p></div>
+        <div><p>Privacy policy</p></div>
+        <div><p>Cookie policy</p></div>
+        <div><p>Contact us</p></div>
+        <div></div>
+     </div>
+     <div id="right">
+        <h1>Contact us</h1>
+        <p>Our team is here to help with any inquiry you might have. To help us help you, please see below for the correct contact.</p>
+        <p>Are you a customer with a question about shopping on Lyst?</p>
+        <p>Visit our Help Center, or contact Customer Care at customercare@lyst.com.</p>
+        <p>Are you a store, brand or designer interested in featuring on Lyst?</p>
+        <p>Apply here to become a Lyst partner.</p>
+        <p>Press inquiries</p>
+        <p>For any media inquiries, image requests or interview opportunities please contact press@lyst.com</p>
+        <p>Registered Office</p>
+        <p>Lyst Limited</p>
+        <p>Floor 7, The Minster Building</p>
+        <p>21 Mincing Lane</p>
+        <p>London</p>
+        <p>EC3R 7AG</p>
+     </div>
+    </div>
+</body>
+</html>
+<script type="module" src="./contactus.js"></script>
