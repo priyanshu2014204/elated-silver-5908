@@ -77,6 +77,6 @@ document.querySelector("#signup1").addEventListener("click",()=>{
     user.SignUp(email,newpass);
     console.log(user)
       
-    //document.location.href="index.html";
+    document.location.href="index.html";
 
 })
