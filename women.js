@@ -35,8 +35,8 @@ headers: {
 };
 
 function availdata(search){
-  let value=searchput.value || "underwear"
-    // fetch(`https://apidojo-forever21-v1.p.rapidapi.com/products/search?query=${value}&rows=1&start=0`, opt)
+  let value=searchput.value || "jacket"
+    // fetch(`https://apidojo-forever21-v1.p.rapidapi.com/products/search?query=${value}&rows=3&start=0`, opt)
     // 	.then(response => response.json())
     // 	.then(response => appendstick(response.response.docs))
     // 	.catch(err => console.error(err));
@@ -77,6 +77,7 @@ data.forEach(function(el){
     let button_div=document.createElement("div")
     let button=document.createElement("button");
     button.innerText="Buy now";
+    button.addEventListener("click",changeever)
     button_div.append(button);
     button_div.className="btn_div"
     button.className="blackbuy"
@@ -110,11 +111,15 @@ window.addEventListener("scroll",scroll)
 
 
 
-searchput.addEventListener("input",bringdata);
+searchput.addEventListener("click",bringdata);
 
 
 function bringdata(){
     setTimeout(()=>{
         availdata(searchput.value)
     },1000)
+}
+
+function changeever(){
+    window.location.href="payment.html"
 }
