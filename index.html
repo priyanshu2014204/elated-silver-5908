@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<div class="scroltime"></div>
+
 
 
     <div class="navbar">
@@ -343,6 +343,9 @@
 <div id="footer">
        
 </div>
+<audio src="click.wav" id="load">
+    <!-- <source src="click.wav" > -->
+</audio>
 
 </body>
 </html>
@@ -354,4 +357,13 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="index.js" type="module"></script>
-<script src="drivetest.js" type="module"></script>
+<!-- <script src="drivetest.js" type="module"></script> -->
+<script>
+    // var sound=new Audio();
+    // sound.src="click.wav";
+    // document.querySelector("a").addEventListener("click",sound.play)
+let ab=document.getElementById("load")
+    document.querySelector("body").addEventListener("click",()=>{
+        ab.play()
+    })
+</script>

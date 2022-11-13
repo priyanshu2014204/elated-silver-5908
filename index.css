@@ -528,3 +528,13 @@ transform: translateX(-50%);
     inset: 0 0 auto;
     
 }
+
+.help-section{
+    position: relative;
+    top: -5px;
+}
+
+.large{
+    position: relative;
+    top: 8px;
+}
