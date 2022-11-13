@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container{
+        background-color: #004040;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .popup>img{
+        width: 100px;
+        margin-top: -10%;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+    }
+    .popup{
+        text-align: center;
+        /* background-color: white; */
+        /* border-radius: 6px; */
+        /* border-radius: 50%; */
+        /* width: 400px; */
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0.4);
+        padding: 0px 20px 30px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        visibility: hidden;
+        transition: transform 0.4s,top 0.4s;
+    }
+
+    .popup button{
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px 0;
+        background: #69fd69;
+        font-size: 18px;
+        border-radius: 4px;
+
+    }
+    .map{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%,-50%) scale(1);
+
+
+    }
+
+
+    .random{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    .btn{
+        text-align: center;
+       position: relative;
+    }
+    /* button{
+        position: relative;
+        top: -176px;
+    } */
+
+    .btn button{
+    width:200px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    font-size: 20px;
+    border: none;
+    position: relative;
+        top: -176px;
+     transition-property: background-color;
+      /* transition-duration: 1s; */
+     padding: 10px;
+}
+.btn button:hover{
+   background-color:gray;
+}
+
+    </style>
+</head>
+<body>
+   <!-- <div class="container">
+    <div class="popup">
+        <!-- <img src="data:image/png;base64,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" alt=""> -->
+        <!-- <img src="payee.gif" alt=""> -->
+        
+        <!-- <h2>Thank You!</h2>
+        <p>Your details Has been sucessfully submitted. Thanks!</p>
+        <button type="button">Ok</button> -->
+    </div>
+   </div> 
+   <div class="random">
+    <img src="payee.gif" alt="">
+</div>
+<div class="btn">
+    <button>Continue Shopping</button>
+</div>
+  
+</body>
+</html>
+<script>
+    console.log(document.querySelector(".btn"))
+    document.querySelector(".btn").addEventListener("click",()=>{window.location.href="index.html"})
+    // setTimeout(()=>{
+    //     document.querySelector(".popup").classList.add("map")
+    // },500)
+</script>
