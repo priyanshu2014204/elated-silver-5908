@@ -9,6 +9,9 @@ document.querySelector(".women").addEventListener("click",()=>{
     window.location.href="women.html"
 })
 
+import { footer } from "./component/footer.js";
+let Footer=document.getElementById("footer");
+Footer.innerHTML=footer()
 
 let div=document.querySelector("#move")
 let imgtag=document.createElement("img");
@@ -73,7 +76,7 @@ document.querySelector("#signup1").addEventListener("click",()=>{
      
     user.SignUp(email,newpass);
     console.log(user)
-
-    document.location.href="index.html";
+      
+    //document.location.href="index.html";
 
 })
