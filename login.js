@@ -9,6 +9,9 @@ document.querySelector(".women").addEventListener("click",()=>{
     window.location.href="women.html"
 })
 
+import { footer } from "./component/footer.js";
+let Footer=document.getElementById("footer");
+Footer.innerHTML=footer()
 
 let div=document.querySelector("#move")
 let imgtag=document.createElement("img");
@@ -134,7 +137,7 @@ user.SignUp();
 
     })
   }
-  //deletefun();
+  //deletefun(2);
 
 
   const passfun=(data)=>{
